@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+    
+    
+    <style>
+        /* Simple styles for quiz */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #quiz-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        .answer {
+            margin: 10px 0;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2em;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+        #result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="planet-name"></h1>
+    <div id="quiz-container">
+        <!-- Quiz questions will be generated here -->
+    </div>
+    <button id="submit-quiz">Submit Quiz</button>
+    <div id="result"></div>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const planetName = urlParams.get('planet');
+
+        console.log("Selected Planet:", planetName); // Log selected planet
+        document.getElementById('planet-name').innerText = `Quiz for: ${planetName}`;
+
+        // Quiz questions for each planet
+        const quizData = {
+            sun: [
+                { question: "What is the Sun primarily made of?", answers: ["Hydrogen", "Oxygen", "Carbon", "Helium"], correct: 0 },
+                { question: "How many Earths can fit inside the Sun?", answers: ["1 million", "2 million", "3 million", "4 million"], correct: 0 }
+            ],
+            mercury: [
+                { question: "What is the closest planet to the Sun?", answers: ["Venus", "Earth", "Mercury", "Mars"], correct: 2 },
+                { question: "How long is a day on Mercury?", answers: ["59 Earth days", "24 hours", "88 Earth days", "365 days"], correct: 0 }
+            ],
+            venus: [
+                { question: "What is Venus often referred to as?", answers: ["The Red Planet", "Earth's Twin", "The Gas Giant", "The Ice Planet"], correct: 1 },
+                { question: "Which planet has the hottest surface temperature?", answers: ["Mars", "Earth", "Venus", "Mercury"], correct: 2 }
+            ],
+            earth: [
+                { question: "What percentage of Earth's surface is water?", answers: ["50%", "70%", "80%", "60%"], correct: 1 },
+                { question: "What is the only planet known to support life?", answers: ["Mars", "Venus", "Earth", "Jupiter"], correct: 2 }
+            ],
+            Mars: [
+                { question: "What is Mars known as?", answers: ["The Red Planet", "The Blue Planet", "The Green Planet", "The Yellow Planet"], correct: 0 },
+                { question: "What is the largest volcano on Mars?", answers: ["Olympus Mons", "Mount Everest", "Mauna Kea", "Kilimanjaro"], correct: 0 }
+            ],
+            // Add more planets and their questions here...
+        };
+
+        // Function to display the quiz questions
+        function displayQuiz(planet) {
+            const questions = quizData[planet] || [];
+            console.log("Questions for the planet:", questions); // Log questions
+            let quizHtml = '';
+            questions.forEach((item, index) => {
+                quizHtml += `<div class="question">
+                                <p>${index + 1}. ${item.question}</p>`;
+                item.answers.forEach((answer, i) => {
+                    quizHtml += `<div class="answer">
+                                    <input type="radio" name="question${index}" value="${i}" id="q${index}a${i}">
+                                    <label for="q${index}a${i}">${answer}</label>
+                                  </div>`;
+                });
+                quizHtml += '</div>';
+            });
+            document.getElementById('quiz-container').innerHTML = quizHtml;
+        }
+
+        // Display the quiz for the selected planet
+        displayQuiz(planetName);
+
+        // Handle quiz submission
+        document.getElementById('submit-quiz').onclick = function() {
+            let score = 0;
+            const questions = quizData[planetName] || [];
+            questions.forEach((item, index) => {
+                const selected = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selected && parseInt(selected.value) === item.correct) {
+                    score++;
+                }
+            });
+            document.getElementById('result').innerText = `Your score: ${score}/${questions.length}`;
+        };
+    </script>
+</body>
+</html>
