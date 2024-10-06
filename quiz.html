@@ -74,26 +74,126 @@
         const quizData = {
             sun: [
                 { question: "What is the Sun primarily made of?", answers: ["Hydrogen", "Oxygen", "Carbon", "Helium"], correct: 0 },
-                { question: "How many Earths can fit inside the Sun?", answers: ["1 million", "2 million", "3 million", "4 million"], correct: 0 }
+                { question: "How many Earths can fit inside the Sun?", answers: ["1 million", "2 million", "3 million", "4 million"], correct: 0 },
+                { question: "What is the surface temperature of the Sun?", answers: ["5,500°C", "1,000°C", "3,000°C", "7,000°C"], correct: 0 },
+                { question: "How old is the Sun?", answers: ["4.6 billion years", "2 billion years", "10 billion years", "1 million years"], correct: 0 },
+                { question: "What type of star is the Sun?", answers: ["Red giant", "White dwarf", "Yellow dwarf", "Blue giant"], correct: 2 },
+                { question: "How long does light from the Sun take to reach Earth?", answers: ["8 minutes", "20 minutes", "1 hour", "Instantly"], correct: 0 },
+                { question: "What is the outermost layer of the Sun?", answers: ["Photosphere", "Corona", "Core", "Chromosphere"], correct: 1 },
+                { question: "What process powers the Sun?", answers: ["Nuclear fusion", "Nuclear fission", "Combustion", "Magnetic fusion"], correct: 0 },
+                { question: "What will the Sun become at the end of its life?", answers: ["Black hole", "Red giant", "White dwarf", "Neutron star"], correct: 2 },
+                { question: "What is the closest planet to the Sun?", answers: ["Mercury", "Venus", "Earth", "Mars"], correct: 0 }
             ],
             mercury: [
                 { question: "What is the closest planet to the Sun?", answers: ["Venus", "Earth", "Mercury", "Mars"], correct: 2 },
-                { question: "How long is a day on Mercury?", answers: ["59 Earth days", "24 hours", "88 Earth days", "365 days"], correct: 0 }
+                { question: "How long is a day on Mercury?", answers: ["59 Earth days", "24 hours", "88 Earth days", "365 days"], correct: 0 },
+                { question: "What is the orbital period of Mercury?", answers: ["88 Earth days", "365 Earth days", "687 Earth days", "24 hours"], correct: 0 },
+                { question: "Does Mercury have an atmosphere?", answers: ["Yes", "No"], correct: 1 },
+                { question: "What is Mercury's surface temperature during the day?", answers: ["400°C", "100°C", "50°C", "-100°C"], correct: 0 },
+                { question: "Is Mercury's core solid or molten?", answers: ["Solid", "Molten", "Both"], correct: 2 },
+                { question: "Mercury is named after which Roman god?", answers: ["Mars", "Mercury", "Jupiter", "Saturn"], correct: 1 },
+                { question: "How many moons does Mercury have?", answers: ["0", "1", "2", "3"], correct: 0 },
+                { question: "Which spacecraft first visited Mercury?", answers: ["Mariner 10", "Voyager", "Pioneer", "New Horizons"], correct: 0 },
+                { question: "What is the second closest planet to Mercury?", answers: ["Venus", "Earth", "Mars", "Jupiter"], correct: 0 }
             ],
             venus: [
                 { question: "What is Venus often referred to as?", answers: ["The Red Planet", "Earth's Twin", "The Gas Giant", "The Ice Planet"], correct: 1 },
-                { question: "Which planet has the hottest surface temperature?", answers: ["Mars", "Earth", "Venus", "Mercury"], correct: 2 }
+                { question: "Which planet has the hottest surface temperature?", answers: ["Mars", "Earth", "Venus", "Mercury"], correct: 2 },
+                { question: "How long is a day on Venus?", answers: ["24 hours", "243 Earth days", "365 Earth days", "10 hours"], correct: 1 },
+                { question: "What is Venus' atmosphere mostly made of?", answers: ["Oxygen", "Nitrogen", "Carbon dioxide", "Helium"], correct: 2 },
+                { question: "Which planet rotates in the opposite direction to most others?", answers: ["Earth", "Mars", "Venus", "Jupiter"], correct: 2 },
+                { question: "What is the atmospheric pressure on Venus compared to Earth?", answers: ["50 times", "100 times", "10 times", "90 times"], correct: 3 },
+                { question: "Does Venus have any moons?", answers: ["Yes", "No"], correct: 1 },
+                { question: "What is the surface temperature of Venus?", answers: ["100°C", "250°C", "465°C", "700°C"], correct: 2 },
+                { question: "Venus is named after which Roman goddess?", answers: ["Juno", "Venus", "Minerva", "Diana"], correct: 1 },
+                { question: "How long does it take for Venus to orbit the Sun?", answers: ["88 Earth days", "225 Earth days", "365 Earth days", "687 Earth days"], correct: 1 }
             ],
             earth: [
                 { question: "What percentage of Earth's surface is water?", answers: ["50%", "70%", "80%", "60%"], correct: 1 },
-                { question: "What is the only planet known to support life?", answers: ["Mars", "Venus", "Earth", "Jupiter"], correct: 2 }
+                { question: "What is the only planet known to support life?", answers: ["Mars", "Venus", "Earth", "Jupiter"], correct: 2 },
+                { question: "What is the Earth's atmosphere mostly made of?", answers: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"], correct: 1 },
+                { question: "How long does it take Earth to orbit the Sun?", answers: ["365 days", "30 days", "100 days", "365.25 days"], correct: 3 },
+                { question: "How many moons does Earth have?", answers: ["1", "2", "3", "0"], correct: 0 },
+                { question: "What is Earth's largest continent?", answers: ["Asia", "Africa", "North America", "Europe"], correct: 0 },
+                { question: "Which is the deepest point in Earth's oceans?", answers: ["Mariana Trench", "Great Barrier Reef", "Amazon River", "Gulf of Mexico"], correct: 0 },
+                { question: "What layer of Earth do we live on?", answers: ["Crust", "Mantle", "Core", "Lithosphere"], correct: 0 },
+                { question: "How old is Earth?", answers: ["4.5 billion years", "1 billion years", "10 billion years", "2 million years"], correct: 0 },
+                { question: "What is the force that keeps us grounded on Earth?", answers: ["Friction", "Electromagnetism", "Gravity", "Inertia"], correct: 2 }
             ],
-            Mars: [
+            mars: [
                 { question: "What is Mars known as?", answers: ["The Red Planet", "The Blue Planet", "The Green Planet", "The Yellow Planet"], correct: 0 },
-                { question: "What is the largest volcano on Mars?", answers: ["Olympus Mons", "Mount Everest", "Mauna Kea", "Kilimanjaro"], correct: 0 }
+                { question: "What is the largest volcano on Mars?", answers: ["Olympus Mons", "Mount Everest", "Mauna Kea", "Kilimanjaro"], correct: 0 },
+                { question: "How many moons does Mars have?", answers: ["0", "1", "2", "3"], correct: 2 },
+                { question: "What is the atmosphere of Mars mostly made of?", answers: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Helium"], correct: 1 },
+                { question: "What is the average temperature on Mars?", answers: ["-63°C", "20°C", "100°C", "-200°C"], correct: 0 },
+                { question: "Which spacecraft was the first to land on Mars?", answers: ["Viking 1", "Curiosity", "Mariner 9", "Voyager 1"], correct: 0 },
+                { question: "How long is a day on Mars?", answers: ["24 hours", "25 hours", "23 hours", "26 hours"], correct: 1 },
+                { question: "How long does it take Mars to orbit the Sun?", answers: ["365 days", "225 days", "687 days", "1 year"], correct: 2 },
+                { question: "What is the tallest mountain in the solar system?", answers: ["Olympus Mons", "Mount Everest", "Mauna Kea", "Vesuvius"], correct: 0 },
+                { question: "Mars is named after which Roman god?", answers: ["Mars", "Jupiter", "Neptune", "Pluto"], correct: 0 }
             ],
-            // Add more planets and their questions here...
+            jupiter: [
+                { question: "What is the largest planet in the solar system?", answers: ["Earth", "Mars", "Jupiter", "Saturn"], correct: 2 },
+                { question: "How many moons does Jupiter have?", answers: ["79", "62", "14", "1"], correct: 0 },
+                { question: "What is the Great Red Spot on Jupiter?", answers: ["A storm", "A volcano", "A crater", "A desert"], correct: 0 },
+                { question: "How long is a day on Jupiter?", answers: ["24 hours", "10 hours", "12 hours", "20 hours"], correct: 1 },
+                { question: "What is Jupiter's atmosphere mostly made of?", answers: ["Hydrogen and Helium", "Carbon Dioxide", "Nitrogen", "Oxygen"], correct: 0 },
+                { question: "Which spacecraft was the first to visit Jupiter?", answers: ["Voyager 1", "Pioneer 10", "Galileo", "Juno"], correct: 1 },
+                { question: "What is the orbital period of Jupiter?", answers: ["365 days", "12 Earth years", "687 days", "1 Earth year"], correct: 1 },
+                { question: "What is the largest moon of Jupiter?", answers: ["Io", "Europa", "Ganymede", "Callisto"], correct: 2 },
+                { question: "Jupiter is named after which Roman god?", answers: ["Saturn", "Neptune", "Mars", "Jupiter"], correct: 3 },
+                { question: "How many Earths can fit inside Jupiter?", answers: ["1,000", "1,300", "1,600", "2,000"], correct: 1 }
+            ],
+            saturn: [
+                { question: "What is Saturn best known for?", answers: ["Its rings", "Its moons", "Its size", "Its storms"], correct: 0 },
+                { question: "How many moons does Saturn have?", answers: ["82", "79", "62", "14"], correct: 0 },
+                { question: "What are Saturn's rings made of?", answers: ["Rock and ice", "Gas", "Dust", "Lava"], correct: 0 },
+                { question: "How long is a day on Saturn?", answers: ["10 hours", "12 hours", "24 hours", "15 hours"], correct: 0 },
+                { question: "What is Saturn's largest moon?", answers: ["Titan", "Enceladus", "Rhea", "Dione"], correct: 0 },
+                { question: "Which spacecraft first visited Saturn?", answers: ["Voyager 1", "Pioneer 10", "Cassini", "Galileo"], correct: 0 },
+                { question: "What is Saturn's atmosphere mostly made of?", answers: ["Hydrogen and Helium", "Carbon Dioxide", "Nitrogen", "Oxygen"], correct: 0 },
+                { question: "How long does it take Saturn to orbit the Sun?", answers: ["29 Earth years", "12 Earth years", "165 Earth years", "88 Earth days"], correct: 0 },
+                { question: "How wide are Saturn's rings?", answers: ["282,000 km", "100,000 km", "50,000 km", "10,000 km"], correct: 0 },
+                { question: "Saturn is named after which Roman god?", answers: ["Jupiter", "Saturn", "Neptune", "Mars"], correct: 1 }
+            ],
+            uranus: [
+                { question: "Which planet is tilted on its side?", answers: ["Uranus", "Earth", "Jupiter", "Mars"], correct: 0 },
+                { question: "What is Uranus' atmosphere mostly made of?", answers: ["Hydrogen and Helium", "Oxygen", "Carbon Dioxide", "Methane"], correct: 3 },
+                { question: "How many moons does Uranus have?", answers: ["27", "14", "2", "7"], correct: 0 },
+                { question: "What is the orbital period of Uranus?", answers: ["84 Earth years", "165 Earth years", "29 Earth years", "12 Earth years"], correct: 0 },
+                { question: "Which spacecraft visited Uranus?", answers: ["Voyager 2", "Voyager 1", "Pioneer 10", "Cassini"], correct: 0 },
+                { question: "How long is a day on Uranus?", answers: ["17 hours", "24 hours", "12 hours", "10 hours"], correct: 0 },
+                { question: "What color is Uranus?", answers: ["Blue-green", "Red", "Yellow", "Brown"], correct: 0 },
+                { question: "How was Uranus discovered?", answers: ["By accident", "Through calculations", "By telescope", "By spacecraft"], correct: 2 },
+                { question: "Uranus is named after which Greek god?", answers: ["Uranus", "Zeus", "Poseidon", "Hades"], correct: 0 },
+                { question: "What is the coldest temperature recorded on Uranus?", answers: ["-224°C", "-150°C", "-100°C", "-300°C"], correct: 0 }
+            ],
+            neptune: [
+                { question: "What is Neptune primarily made of?", answers: ["Hydrogen and Helium", "Nitrogen", "Methane", "Oxygen"], correct: 2 },
+                { question: "How many moons does Neptune have?", answers: ["14", "79", "27", "62"], correct: 0 },
+                { question: "How long does it take Neptune to orbit the Sun?", answers: ["165 Earth years", "84 Earth years", "29 Earth years", "12 Earth years"], correct: 0 },
+                { question: "Which spacecraft visited Neptune?", answers: ["Voyager 2", "Voyager 1", "Pioneer 10", "Cassini"], correct: 0 },
+                { question: "How long is a day on Neptune?", answers: ["16 hours", "24 hours", "10 hours", "12 hours"], correct: 0 },
+                { question: "What is Neptune's largest moon?", answers: ["Triton", "Titan", "Io", "Europa"], correct: 0 },
+                { question: "What is the storm on Neptune called?", answers: ["The Great Dark Spot", "The Great Red Spot", "Hurricane Neptune", "Neptune's Eye"], correct: 0 },
+                { question: "Neptune is named after which Roman god?", answers: ["Jupiter", "Neptune", "Mars", "Saturn"], correct: 1 },
+                { question: "What is Neptune's color?", answers: ["Blue", "Red", "Yellow", "Green"], correct: 0 },
+                { question: "How cold is Neptune?", answers: ["-214°C", "-150°C", "-100°C", "-300°C"], correct: 0 }
+            ],
+            pluto: [
+                { question: "What type of planet is Pluto?", answers: ["Dwarf planet", "Terrestrial planet", "Gas giant", "Ice giant"], correct: 0 },
+                { question: "When was Pluto reclassified as a dwarf planet?", answers: ["2006", "2010", "2000", "1999"], correct: 0 },
+                { question: "How many moons does Pluto have?", answers: ["5", "1", "3", "0"], correct: 0 },
+                { question: "What is Pluto primarily made of?", answers: ["Rock and ice", "Gas", "Lava", "Water"], correct: 0 },
+                { question: "How long does it take Pluto to orbit the Sun?", answers: ["248 Earth years", "165 Earth years", "84 Earth years", "29 Earth years"], correct: 0 },
+                { question: "Which spacecraft visited Pluto?", answers: ["New Horizons", "Voyager 1", "Pioneer 10", "Cassini"], correct: 0 },
+                { question: "What is Pluto's largest moon?", answers: ["Charon", "Nix", "Hydra", "Styx"], correct: 0 },
+                { question: "What is the temperature on Pluto?", answers: ["-229°C", "-150°C", "-100°C", "-300°C"], correct: 0 },
+                { question: "Pluto is named after which Roman god?", answers: ["Pluto", "Jupiter", "Mars", "Neptune"], correct: 0 },
+                { question: "When was Pluto discovered?", answers: ["1930", "1900", "1800", "1700"], correct: 0 }
+            ]
         };
+        
 
         // Function to display the quiz questions
         function displayQuiz(planet) {
